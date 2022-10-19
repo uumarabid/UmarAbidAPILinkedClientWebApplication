@@ -18,12 +18,12 @@ fetch("https://data.police.uk/api/crime-categories?date=2011-08").then((data)=>{
     //using the array 
     getData.map((values)=>{
         // template literals are used
-       data += `<div class="row">
+       data += `
        <div class="col-md-2 shadow p-4 mb-3 bg-body rounded mx-1">
          <h2>${values.name}</h2>
          <a href=${values.url}>${values.url}</a>
        </div>
-       </div>` 
+       ` 
     });
 
     // display on the browser
