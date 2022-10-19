@@ -1,7 +1,23 @@
-
+/* Visually hide the skip link */ 
+header > a {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  /* Reaveal the skip link */
+  header > a:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    color: #f9fafa;
+    background-color: #000000;
+  }
+  
 h1{
     text-align: center;
-    margin-bottom: 100px;
 }
 h2{
     text-align: center;
