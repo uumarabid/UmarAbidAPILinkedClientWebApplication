@@ -32,7 +32,7 @@ function loadData(getData){
     getData.map((values)=>{
         // template literals are used
        data += `
-       <div class="col-lg-4 col-sm-6 col-md-4 col-xs-2  mb-3">
+       <div class="col-lg-4 col-sm-6 col-md-4 col-xs-2 mb-3 sizeFix">
         <div class="bg-body rounded mx-1 shadow p-4 list">
             <h2>${values.name}</h2>
             <a href="${values.url}">${values.url}</a>
