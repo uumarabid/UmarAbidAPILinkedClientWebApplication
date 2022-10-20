@@ -14,37 +14,29 @@ fetch("https://data.police.uk/api/crime-categories?date=2011-08").then((data)=>{
     // console.log(getData[1].name);
     // document.getElementById("dispaly").innerText = getData[1].name;
     globalData = getData;
-    let data = "";
-    //using the array 
-    getData.map((values)=>{
-        // template literals are used
-       data += `
-       <div class="col-md-2 shadow p-4 mb-3 bg-body rounded mx-1">
-         <h2>${values.name}</h2>
-         <a href="${values.url}">${values.url}</a>
-       </div>
-       ` 
-    });
-
-    // display on the browser
-    document.getElementById("dispaly").innerHTML = data
-
+    loadData(getData);
     // error hander
 }).catch ((error)=>{
     console.log(error);
 })
 
-
+// Add search feature 
 function search(){
     const value  = document.getElementById("searchData").value;
     const getData = globalData.filter(x => x.name.toLowerCase().includes(value.toLowerCase()));
+    loadData(getData);
+}
+
+function loadData(getData){
     let data = "";
     getData.map((values)=>{
         // template literals are used
        data += `
-       <div class="col-md-2 shadow p-4 mb-3 bg-body rounded mx-1">
-         <h2>${values.name}</h2>
-         <a href="${values.url}">${values.url}</a>
+       <div class="col-lg-4 col-sm-6 col-md-4 col-xs-2  mb-3">
+        <div class="bg-body rounded mx-1 shadow  p-4">
+            <h2>${values.name}</h2>
+            <a href="${values.url}">${values.url}</a>
+         </div>
        </div>
        ` 
     });
