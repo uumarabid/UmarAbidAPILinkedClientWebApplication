@@ -4,7 +4,7 @@
 // https://data.police.uk/docs/method/crime-categories/
 
 let globalData = null;
-fetch("https://data.police.uk/api/crime-categories?date=2011-08").then((data)=>{
+fetch("https://api.imgflip.com/get_memes").then((data)=>{
     console.log(data);
     // convert the data into  JS object 
     return data.json();
@@ -13,8 +13,8 @@ fetch("https://data.police.uk/api/crime-categories?date=2011-08").then((data)=>{
     // test the data to display on the browser
     // console.log(getData[1].name);
     // document.getElementById("dispaly").innerText = getData[1].name;
-    globalData = getData;
-    loadData(getData);
+    globalData = getData.data.memes;
+    loadData(globalData);
     // error hander
 }).catch ((error)=>{
     console.log(error);
@@ -32,10 +32,10 @@ function loadData(getData){
     getData.map((values)=>{
         // template literals are used
        data += `
-       <div class="col-lg-4 col-sm-6 col-md-4 col-xs-2  mb-3">
+       <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12 mb-3 sizeFix">
         <div class="bg-body rounded mx-1 shadow p-4 list">
             <h2>${values.name}</h2>
-            <a href="${values.url}">${values.url}</a>
+            <img src="${values.url}" style="width: 100%; height: ${values.height}"/>
          </div>
        </div>
        ` 
