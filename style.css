@@ -46,3 +46,21 @@ a {
 .sizeFix {
   display: flex;
 }
+
+footer h4,
+p,
+li {
+  margin-left: 10px;
+}
+
+footer ul li > a {
+  text-decoration: none;
+  color: white !important;
+  padding: 10px;
+  margin-left: 10px;
+  margin-left: auto !important;
+}
+
+footer ul > li {
+  display: inline-block;
+}

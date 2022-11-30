@@ -38,7 +38,7 @@ function loadData(getData) {
        <div class="col-lg-6 col-sm-12 col-md-12 col-xs-12 mb-3 sizeFix">
         <div class="bg-body rounded mx-1 shadow p-4 list">
             <h2>${values.name}</h2>
-            <img src="${values.url}" alt="${values.name} "style="width: 100%; height: ${values.height}"/>
+            <img src="${values.url}" alt="${values.name} loading="lazy" style="width: 100%; height: ${values.height}"/>
          </div>
        </div>
        `;
