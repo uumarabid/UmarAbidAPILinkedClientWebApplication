@@ -3,6 +3,9 @@
 // Promise (JS) will either fullfilled or rejected .
 // https://data.police.uk/docs/method/crime-categories/
 
+// originally adopted from link below but refactored.
+// https://www.youtube.com/watch?v=m_vL25vzpiE&list=LL&index=11&t=1191s&ab_channel=StepbyStep
+
 let globalData = null;
 fetch("https://data.police.uk/api/crime-categories?date=2011-08")
   .then((data) => {
