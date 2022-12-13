@@ -22,10 +22,11 @@ header > a:focus {
   background: #53a7ea !important;
 }
 
-h1 {
+h1,
+h2 {
   text-align: center;
 }
-h2 {
+h3 {
   text-align: center;
   word-break: break-all;
 }

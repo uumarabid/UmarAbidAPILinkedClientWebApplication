@@ -40,7 +40,7 @@ function loadData(getData) {
     data += `
        <div class="col-lg-4 col-sm-6 col-md-4 col-xs-2 mb-3 sizeFix">
         <div class="bg-body rounded mx-1 shadow p-4 list">
-            <h2>${values.name}</h2>
+            <h3>${values.name}</h3>
             <a href="${values.url}">${values.url}</a>
          </div>
        </div>
