@@ -23,13 +23,6 @@ fetch("https://api.imgflip.com/get_memes")
     console.log(error);
   });
 
-// Add search feature
-function search() {
-  const value = document.getElementById("searchData").value;
-  const getData = globalData.filter((x) => x.name.toLowerCase().includes(value.toLowerCase()));
-  loadData(getData);
-}
-
 function loadData(getData) {
   let data = "";
   getData.map((values) => {

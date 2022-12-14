@@ -1,3 +1,10 @@
+// Add search feature
+const search = () => {
+  const value = document.getElementById("searchData").value;
+  const getData = globalData.filter((x) => x.name.toLowerCase().includes(value.toLowerCase()));
+  loadData(getData);
+};
+
 // addopted code from
 /* https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
 // Get the button:
