@@ -20,8 +20,8 @@ fetch("https://data.police.uk/api/crime-categories?date=2011-08")
     // document.getElementById("dispaly").innerText = getData[1].name;
     globalData = getData;
     loadData(getData);
-    // error hander
   })
+  // error hander
   .catch((error) => {
     console.log(error);
   });
