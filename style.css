@@ -7,7 +7,7 @@ header > a {
   height: 1px;
   overflow: hidden;
 }
-/* Reaveal the skip link */
+/* Reveal the skip link */
 header > a:focus {
   position: static;
   width: auto;
