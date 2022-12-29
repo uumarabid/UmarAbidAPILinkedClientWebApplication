@@ -17,7 +17,7 @@ function loadPoliceForces(getData) {
     // template literals are used
     data += `
          <div class="col-lg-4 col-sm-6 col-md-4 col-xs-2 mb-3 sizeFix">
-          <div class="bg-body rounded mx-1 shadow p-4 list">
+          <div class="bg-body rounded mx-1 shadow p-4 list" onclick="loadPoliceForceDetail('${values.id}')">
               <h4 class="policeForceHeading">${values.name}</h4>
            </div>
          </div>
@@ -27,4 +27,18 @@ function loadPoliceForces(getData) {
   // display on the browser
   document.getElementById("dispaly").innerHTML = data;
 }
-fetchPoliceForcesData();
+
+function loadPoliceForceDetail(id) {
+  fetch(`https://data.police.uk/api/forces/${id}`)
+    .then((data) => {
+      return data.json();
+    })
+    .then((policeForceDetail) => {
+      console.log(policeForceDetail);
+    });
+}
+
+// this method will be called on page load
+window.onload = function () {
+  fetchPoliceForcesData();
+};
