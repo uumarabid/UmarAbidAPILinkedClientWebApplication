@@ -1,30 +1,15 @@
-// Add search feature
-const search = () => {
-  const value = document.getElementById("searchData").value;
-  const getData = globalData.filter((x) => x.name.toLowerCase().includes(value.toLowerCase()));
-  loadData(getData);
-};
-
-// addopted code from
-/* https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
-// Get the button:
-let mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction();
-};
-// used arrow function
-const scrollFunction = () => {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+// took it from https://www.brefere.com/fbapps/bcom.nsf/cvbdate/D514491209EE5C848725801A0074AE6E?opendocument#:~:text=Unfortunately%2C%20you%20cannot%20place%20multiple,use%20the%20addLoadEvent%20function%20below.
+// we cannot use multiple onLoad events on the same page. as we needed to bind 2 events (1. from policeApi.js file 2. from the scroll.js file we used the below code to register the onload event)
+function addLoadEvent(func) {
+  var oldonload = window.onload;
+  if (typeof window.onload != "function") {
+    window.onload = func;
   } else {
-    mybutton.style.display = "none";
+    window.onload = function () {
+      if (oldonload) {
+        oldonload();
+      }
+      func();
+    };
   }
-};
-
-// When the user clicks on the button, scroll to the top of the document
-const topFunction = () => {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-};
+}
