@@ -74,9 +74,3 @@ footer ul > li {
   z-index: 99; /* Make sure it does not overlap */
   font-size: 20px;
 }
-@media (max-width: 641px) {
-  * {
-    font-style: italic;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  }
-}
