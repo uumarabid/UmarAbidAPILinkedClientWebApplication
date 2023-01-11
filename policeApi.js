@@ -20,9 +20,10 @@ function loadPoliceForces(getData) {
   getData.map((values) => {
     // template literals are used
     data += `
-         <div class="col-lg-4 col-sm-6 col-md-4 col-xs-2 mb-3 sizeFix">
-          <div class="bg-body rounded mx-1 shadow p-4 list" onclick="loadPoliceForceDetail('${values.id}')" data-bs-toggle="modal" data-bs-target="#policeForceDetail">
-              <h4>${values.name}</h4>
+         <div class="col-lg-4 col-sm-6 col-md-4 col-xs-2 mb-3 sizeFix" tabindex="0">
+          <div class="bg-body rounded mx-1 shadow p-4 list" onclick="loadPoliceForceDetail(this, '${values.id}')"
+            data-bs-toggle="modal" data-bs-target="#policeForceDetail">
+            <h4>${values.name}</h4>
            </div>
          </div>
          `;
