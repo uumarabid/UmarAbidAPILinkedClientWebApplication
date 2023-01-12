@@ -26,7 +26,7 @@ h1,
 h2 {
   text-align: center;
 }
-h3 {
+h4 {
   text-align: center;
   word-break: break-all;
 }
@@ -73,10 +73,4 @@ footer ul > li {
   right: 30px;
   z-index: 99; /* Make sure it does not overlap */
   font-size: 20px;
-}
-@media (max-width: 641px) {
-  * {
-    font-style: italic;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  }
 }
